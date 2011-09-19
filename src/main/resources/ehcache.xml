@@ -1,0 +1,19 @@
+<ehcache>
+
+    <terracottaConfig url="localhost:9510"/>
+
+    <defaultCache maxElementsInMemory="1000"
+                  eternal="true"
+                  timeToIdleSeconds="0"
+                  timeToLiveSeconds="0"
+                  overflowToDisk="false"/>
+
+    <cache  name="accountsCache"
+            maxElementsInMemory="500"
+            eternal="true"
+            overflowToDisk="false"
+            transactionalMode="local">
+        <terracotta consistency="strong"/>
+    </cache>
+
+</ehcache>
